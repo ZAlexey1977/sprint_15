@@ -37,13 +37,19 @@ let user: IUser = {
   created: 5,
 };
 
-console.log(user);
+// console.log(user);
 // реализуйте объект на основе интерфейса IUser и выведите в консоль. Проверьте работу и закомментируйте код проверки.
 
 // Task 03
 // Созданы два объекта obj_31, obj_32 - напишите интерфейс ІTelegram который они реализуют. Обычно свойства с id реализуются через readonly.
 
-interface ITelegram {}
+interface ITelegram {
+  readonly message_id: number;
+  readonly user_id: number;
+  username: string;
+  time: string;
+  body: string;
+}
 
 const obj_31: ITelegram = {
   message_id: 32546,
@@ -61,6 +67,9 @@ const obj_32: ITelegram = {
   body: "Небольшой анонс на сегодня...",
 };
 
+// console.log(obj_31);
+// console.log(obj_32);
+
 // Task 04
 // Создан интерфейс и объект на его основе.
 
@@ -71,8 +80,13 @@ interface IClock {
 }
 
 const clock = {} as IClock; // не изменяйте данную строку.
+clock.h = 21;
+clock.m = 31;
+clock.s = 59;
 
 // тут заполните объект сlock, установите 21 час, 31 минута и 59 секунд.
+
+// console.log(clock);
 
 // Task 05
 // Создайте интерфейс IStore, который описывает товар магазина. Опишите свойство title - string, amount - number, size - массив чисел.
