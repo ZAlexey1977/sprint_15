@@ -43,6 +43,14 @@ let bigStore = {
     size: [1, 2, 3, 4, 5],
     color: ["red", "green", "yellow"],
 };
+let cart = {
+    addToCart() {
+        return 5;
+    },
+    clearCart() {
+        console.log("test");
+    },
+};
 // Тут создайте класс Paragraph c имплементацией свойств и методов интерфейса IElement. Пусть для проверки getWidth возвращает 0.
 // Task 12
 // Класс может реализовывать два интерфейса. Напишите интерфейс IFigureA, интерфейс описывает фигуру квадрат - сторона a (число),
