@@ -32,6 +32,17 @@ const clock = {}; // не изменяйте данную строку.
 clock.h = 21;
 clock.m = 31;
 clock.s = 59;
+let store = {
+    title: "text",
+    amount: 5,
+    size: [1, 2, 3],
+};
+let bigStore = {
+    title: "colors",
+    amount: 10,
+    size: [1, 2, 3, 4, 5],
+    color: ["red", "green", "yellow"],
+};
 // Тут создайте класс Paragraph c имплементацией свойств и методов интерфейса IElement. Пусть для проверки getWidth возвращает 0.
 // Task 12
 // Класс может реализовывать два интерфейса. Напишите интерфейс IFigureA, интерфейс описывает фигуру квадрат - сторона a (число),

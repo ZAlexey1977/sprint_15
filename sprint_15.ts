@@ -91,17 +91,37 @@ clock.s = 59;
 // Task 05
 // Создайте интерфейс IStore, который описывает товар магазина. Опишите свойство title - string, amount - number, size - массив чисел.
 
-// Тут создайте интерфейс IStore
+interface IStore {
+  title: string;
+  amount: number;
+  size: number[];
+}
 
+let store: IStore = {
+  title: "text",
+  amount: 5,
+  size: [1, 2, 3],
+};
 // реализуйте объект на основе интерфейса IStore и выведите в консоль. Проверьте работу и закомментируйте код проверки.
+
+// console.log(store);
 
 // Task 06
 // Давайте расширим интерфейс IStore, и создадим интерфейс IBigStore, который будет расширять IStore и добавлять
 // свойство color - массив цветов (string).
 
-// Тут создайте интерфейс IBigStore
+interface IBigStore extends IStore {
+  color: string[];
+}
 
+let bigStore: IBigStore = {
+  title: "colors",
+  amount: 10,
+  size: [1, 2, 3, 4, 5],
+  color: ["red", "green", "yellow"],
+};
 // реализуйте объект на основе интерфейса IBigStore и выведите в консоль. Проверьте работу и закомментируйте код проверки.
+// console.log(bigStore);
 
 // Task 07
 // Не забывайте - интерфейс это просто соглашение о структуре... И может содержать не только свойства, но и методы (без реализации).
