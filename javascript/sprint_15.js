@@ -84,14 +84,35 @@ class Rectangular extends ARect {
 }
 let obj_10 = new Rectangular(0.5, 20);
 // Тут создайте класс Paragraph c имплементацией свойств и методов интерфейса IElement. Пусть для проверки getWidth возвращает 0.
-// Task 12
-// Класс может реализовывать два интерфейса. Напишите интерфейс IFigureA, интерфейс описывает фигуру квадрат - сторона a (число),
-// и метод getSquare, который возвращает число.
-// Task 13
-// Напишите интерфейс IFigureB, интерфейс описывает фигуру квадрат - сторона b (число), и метод getPerimeter, который возвращает число.
+class Paragraph {
+    tag;
+    paired;
+    text;
+    getWidth() {
+        return 0;
+    }
+}
+let par = new Paragraph();
 // Task 14
 // Создайте класс Rect, который имплементирует интерфейсы IFigureA, IFigureB и реализует методы getSquare, getPerimeter.
+class Rect {
+    a;
+    b;
+    constructor(a, b) {
+        this.a = a;
+        this.b = b;
+    }
+    getPerimeter() {
+        return (this.a + this.b) * 2;
+    }
+    getSquare() {
+        return this.a ** 2;
+    }
+}
 // Для проверки, на базе класса создайте объект obj_14, со сторонами 5 и 4 и выведите его площадь и периметр.
+let obj_14 = new Rect(5, 4);
+// console.log(obj_14.getPerimeter());
+// console.log(obj_14.getSquare());
 // Task 15
 // Создан Абстрактный класс AExample. Напишите интерфейс IExample, который соответствует его структуре.
 class AExample {

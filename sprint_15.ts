@@ -198,7 +198,8 @@ let obj_10 = new Rectangular(0.5, 20);
 
 // Task 11
 // Надеюсь вы заметили разницу между абстрактным классом и интерфейсом. Интерфейс описывает структуру и не содержит реализации.
-// Абстрактный же класс может содержать или не содержать реализации. Однако вернемся к интерфейсам. До текущего момента, мы на базе интерфейсов создавали сразу объекты. Давайте создадим класс Paragraph (implements) на базе интерфейса IElement.
+// Абстрактный же класс может содержать или не содержать реализации. Однако вернемся к интерфейсам. До текущего момента,
+//мы на базе интерфейсов создавали сразу объекты. Давайте создадим класс Paragraph (implements) на базе интерфейса IElement.
 
 interface IElement {
   tag: string;
@@ -208,19 +209,58 @@ interface IElement {
 }
 
 // Тут создайте класс Paragraph c имплементацией свойств и методов интерфейса IElement. Пусть для проверки getWidth возвращает 0.
+class Paragraph implements IElement {
+  tag: string;
+  paired: boolean;
+  text: string;
+  getWidth(): number {
+    return 0;
+  }
+}
+
+let par = new Paragraph();
+// console.log(par.getWidth());
 
 // Task 12
 // Класс может реализовывать два интерфейса. Напишите интерфейс IFigureA, интерфейс описывает фигуру квадрат - сторона a (число),
 // и метод getSquare, который возвращает число.
 
+interface IFigureA {
+  a: number;
+  getSquare(): number;
+}
+
 // Task 13
 // Напишите интерфейс IFigureB, интерфейс описывает фигуру квадрат - сторона b (число), и метод getPerimeter, который возвращает число.
+
+interface IFigureB {
+  b: number;
+  getPerimeter(): number;
+}
 
 // Task 14
 // Создайте класс Rect, который имплементирует интерфейсы IFigureA, IFigureB и реализует методы getSquare, getPerimeter.
 
-// Для проверки, на базе класса создайте объект obj_14, со сторонами 5 и 4 и выведите его площадь и периметр.
+class Rect implements IFigureA, IFigureB {
+  public a: number;
+  public b: number;
+  constructor(a: number, b: number) {
+    this.a = a;
+    this.b = b;
+  }
 
+  getPerimeter(): number {
+    return (this.a + this.b) * 2;
+  }
+  getSquare(): number {
+    return this.a ** 2;
+  }
+}
+
+// Для проверки, на базе класса создайте объект obj_14, со сторонами 5 и 4 и выведите его площадь и периметр.
+let obj_14 = new Rect(5, 4);
+// console.log(obj_14.getPerimeter());
+// console.log(obj_14.getSquare());
 // Task 15
 // Создан Абстрактный класс AExample. Напишите интерфейс IExample, который соответствует его структуре.
 
