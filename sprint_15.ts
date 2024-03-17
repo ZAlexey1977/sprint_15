@@ -261,6 +261,7 @@ class Rect implements IFigureA, IFigureB {
 let obj_14 = new Rect(5, 4);
 // console.log(obj_14.getPerimeter());
 // console.log(obj_14.getSquare());
+
 // Task 15
 // Создан Абстрактный класс AExample. Напишите интерфейс IExample, который соответствует его структуре.
 
@@ -282,3 +283,13 @@ abstract class AExample {
 }
 
 // Тут напишите IExample
+
+interface IExample {
+  src: string;
+  format: string;
+  alt: string;
+  title: string;
+  width: number;
+  widthUnits: string;
+  render(): HTMLImageElement;
+}

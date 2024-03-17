@@ -131,5 +131,4 @@ class AExample {
         return img;
     }
 }
-// Тут напишите IExample
 //# sourceMappingURL=sprint_15.js.map
